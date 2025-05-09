@@ -59,18 +59,18 @@ Git utiliza un flujo basado en tres estados principales para el control de versi
 
 1. **MODIFIED**  
    El archivo ha sido creado, modificado o eliminado, pero **aún no ha sido marcado para el commit** (no está en staging).  
-   👉 Se detectan con:  
+    Se detectan con:  
    ```bash
    git status
    ```
 
 2. **STAGED**  
    El archivo ha sido **marcado como preparado para ser confirmado** en el repositorio local.  
-   👉 Para mover un archivo a este estado:  
+    Para mover un archivo a este estado:  
    ```bash
    git add nombreArchivo
    ```
-   👉 Para agregar todos los archivos modificados:  
+    Para agregar todos los archivos modificados:  
    ```bash
    git add .
    ```
@@ -106,8 +106,7 @@ Es una **pieza fundamental** del control de versiones en Git.
 
 ## 🔁 Restaurar Cambios
 
-Si agregaste un archivo por error al `staging`, puedes deshacerlo con:
-
+Si agregaste un archivo por error al `staging`, se puede deshacer con:
 ```bash
 git restore --staged nombreArchivo
 ```
@@ -214,7 +213,7 @@ Fusionar significa integrar los cambios de una rama a otra:
 git merge nombreRama
 ```
 
-### ⚠️ Conflictos en Git
+### Conflictos en Git
 Un conflicto ocurre cuando Git **no puede determinar automáticamente qué cambio debe conservarse** al fusionar.
 
 #### Resolviendo conflictos (formato del archivo)
