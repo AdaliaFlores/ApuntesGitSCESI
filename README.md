@@ -191,5 +191,41 @@ Esto indica que estás en la rama `main` y en el commit `a1b2c3d`.
 | `git log --oneline`             | Ver historial resumido                          |
 | `git commit --amend -m "nuevo"` | Cambiar mensaje del último commit               |
 
----
 
+# Ramas, Merge y Conflictos
+
+---
+### ¿Qué es una Rama?
+Una rama es una bifurcación de donde estamos en Git. A nivel técnico, es un **apuntador hacia nuevas confirmaciones**.
+
+### ¿Para qué sirven las Ramas?
+Permiten trabajo colaborativo, donde cada persona puede trabajar en una línea diferente del proyecto.
+
+### 📌 Comandos para trabajar con Ramas
+```bash
+git branch nombreRama         # Crea una nueva rama
+git switch nombreRama         # Cambia a una rama existente
+git switch -c nombreRama      # Crea y cambia a la rama
+```
+
+### Fusionar Ramas
+Fusionar significa integrar los cambios de una rama a otra:
+```bash
+git merge nombreRama
+```
+
+### ⚠️ Conflictos en Git
+Un conflicto ocurre cuando Git **no puede determinar automáticamente qué cambio debe conservarse** al fusionar.
+
+#### Resolviendo conflictos (formato del archivo)
+```diff
+<<<<<<< HEAD
+<p>Contenido actual</p>
+=======
+<p>Contenido nuevo</p>
+>>>>>>> changes
+```
+
+El usuario debe elegir qué contenido conservar o combinar ambos.
+
+---
