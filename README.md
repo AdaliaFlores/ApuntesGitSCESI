@@ -354,3 +354,57 @@ Modelo basado en la **confianza y seguridad del desarrollador**:
 
 > Ideal para: flujos colaborativos y desarrollo transparente.
 
+# Buenas Prácticas en Git
+
+---
+
+### ¿Por qué son importantes las buenas prácticas?
+
+Aplicar buenas prácticas en Git no solo mantiene el proyecto organizado, sino que también:
+
+- Facilita la colaboración en equipos pequeños o grandes.
+- Mejora la legibilidad del historial de cambios.
+- Hace más fácil identificar errores o cambios específicos.
+- Reduce conflictos al fusionar ramas.
+
+---
+
+### ¿Cada cuánto hacer commits?
+
+**Haz commits pequeños, frecuentes y significativos**
+
+- Un commit por cada cambio lógico: **no mezcles correcciones con nuevas funcionalidades**.
+- Evita commits enormes que incluyan múltiples cosas (difíciles de revisar y deshacer).
+
+
+---
+
+### Escribir buenos mensajes de commit
+- Usa verbo imperativo (add, fix, change, etc.)
+- Sin punto final
+- En minúsculas
+- Mínimo 50 caracteres de contexto
+
+### Tipos de Commits
+| Tipo     | Descripción                                 |
+|----------|---------------------------------------------|
+| feat     | Nueva funcionalidad                         |
+| fix      | Corrección de bug                           |
+| perf     | Mejora de rendimiento                       |
+| build    | Cambios en sistema de build                 |
+| ci       | Cambios de integración continua             |
+| docs     | Documentación                               |
+| refactor | Refactorización                             |
+| style    | Cambios de estilo                           |
+| test     | Nuevos tests o refactor de existentes       |
+
+Ejemplo:
+```bash
+feat(backend): add filter for cars
+```
+
+### Nombres de ramas
+- Usa nombres consistentes
+- Refleja la acción que se realiza
+
+---
