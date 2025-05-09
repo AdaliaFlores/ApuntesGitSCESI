@@ -466,10 +466,64 @@ git revert hard #para recuperar
 
 ```
 ## EXTRA:
-para ver que hicimos en algún archivo ponermos: 
+para ver que hicimos en algún archivo ponemos: 
 
 ```bash
 git show identficadorCommit
+```
+# Hooks, Alias y Trucos de Git
+---
+
+### ¿Qué es un Hook?
+Scripts que se ejecutan en eventos específicos de Git.
+
+#### Hooks del lado del cliente:
+- `pre-commit`: Validar antes de hacer commit
+- `prepare-commit-msg`: Modificar mensaje
+- `commit-msg`: Validar el mensaje
+- `post-commit`: Notificaciones
+- `pre-push`: Ejecutar tests
+- `post-checkout`, `post-merge`: Limpieza
+
+#### Hooks del servidor:
+- `update`: Validar actualizaciones
+- `pre-receive`: Verificar antes de grabar
+- `post-receive`: Enviar notificaciones
+
+#### Crear un hook:
+Archivo en `.git/hooks/nombre-hook`
+
+### Alias de Git
+```bash
+git config --global alias.co checkout
+```
+
+### Trucos de Git
+
+#### Guardar cambios temporalmente
+```bash
+git stash
+git stash -u
+git stash pop
+git stash clear
+```
+
+#### Aplicar commits específicos
+```bash
+git cherry-pick <SHA>
+```
+
+#### Buscar commit que introduce un bug
+```bash
+git bisect start
+git bisect bad
+git bisect good
+git bisect reset
+```
+
+#### Recuperar archivo específico
+```bash
+git checkout <SHA> <archivo>
 ```
 
 ---
