@@ -300,5 +300,57 @@ Petición para fusionar cambios del local al original.
 - Feedback claro y específico
 - Entender el contexto
 
+# Flujos de Trabajo en Git
+
 ---
+
+## GitFlow
+
+Modelo clásico orientado a equipos grandes y proyectos con despliegues planificados.
+
+- `main`: Código en producción
+- `develop`: Código listo para pruebas
+- `feature`: Nuevas funcionalidades
+- `release`: Cambios finales
+- `hotfix`: Arreglos rápidos
+
+> Ideal para: ciclos de lanzamiento largos, software empresarial, múltiples entornos (dev, staging, prod).
+
+---
+
+## GitHub Flow
+
+- Solo dos tipos de ramas principales: `main` + ramas de trabajo.
+- Las ramas de trabajo nacen desde `main` y se **fusionan mediante Pull Requests**.
+- Se corre CI/CD automáticamente al abrir la PR.
+
+> Ideal para: despliegue continuo, proyectos open source, equipos ágiles.
+
+---
+
+## Trunk-Based Development
+
+
+- Solo existe la rama `main`, y ramas **efímeras** que duran pocas horas o días.
+- Todo cambio se fusiona a `main` rápidamente (con revisiones mínimas).
+- Imprescindible usar **CI/CD, testing automatizado y feature flags**.
+
+> Ideal para: startups, despliegues diarios, equipos avanzados.
+
+---
+
+## Ship / Show / Ask
+
+Modelo basado en la **confianza y seguridad del desarrollador**:
+
+- **Ship**: El código se fusiona directamente a `main`, **sin revisión**.  
+    Se usa cuando estás **100% seguro** de tu cambio.
+
+- **Show**: Se crea un PR que puede ser revisado, pero **no bloquea la fusión**.  
+    Útil cuando estás **seguro (80%)** y solo quieres compartirlo.
+
+- **Ask**: Se crea un PR que **debe ser aprobado** antes de fusionar.  
+     Para cuando necesitas **feedback o validación**.
+
+> Ideal para: flujos colaborativos y desarrollo transparente.
 
