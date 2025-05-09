@@ -51,5 +51,4 @@ cd nombredelproyecto
 ---
 
 ## Imagen relacionada
-
-![Control de Versiones](images/control1.jpg)
+![Control de Versiones](https://github.com/AdaliaFlores/ApuntesGitSCESI/raw/main/images/control1.jpg)
