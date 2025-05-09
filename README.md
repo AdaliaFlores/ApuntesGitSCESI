@@ -47,10 +47,12 @@ Puedes crear un nuevo repositorio con:
 ```bash
 git init nombredelproyecto
 cd nombredelproyecto
+```
 
----
+
 # Estados y Commits en Git
 
+---
 ## Los 3 Estados de Git
 
 Git utiliza un flujo basado en tres estados principales para el control de versiones:
