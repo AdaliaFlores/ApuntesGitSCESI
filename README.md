@@ -407,4 +407,69 @@ feat(backend): add filter for cars
 - Usa nombres consistentes
 - Refleja la acción que se realiza
 
+# Deshacer Cambios
+
+---
+
+### ¿Cuándo deshacer?
+- Falló el proyecto
+- Eliminar cambios
+- Recuperar archivos
+
+### Comandos destructivos vs no destructivos
+- **Destructivos**: Afectan el historial
+- **No destructivos**: Mantienen historial
+
+### Git Reset
+- se usa para mover el puntero `HEAD` a otro commit. Afecta el historial y el área de trabajo según el modo que elijas.
+
+```bash
+git reset --soft <SHA> 
+git reset --hard <SHA>
+git reset --hard HEAD~N
+git reset --soft HEAD~N
+```
+
+### Git Revert
+-  revierte los efectos de un commit creando un nuevo commit inverso. No borra historial.
+
+```bash
+git revert <SHA>
+git revert HEAD~N
+git revert --abort
+```
+
+### Git Checkout
+-  permite moverse a diferentes commits, ramas o archivos.
+
+```bash
+git checkout <SHA>
+git checkout HEAD~N
+```
+
+### Ver qué se hizo
+```bash
+git show <SHA>
+```
+
+### Recuperar si borraste todo
+
+```bash
+git log #Busca el commit al que deseas regresar o revisar.
+git pull origin #Descarga los cambios más recientes del repositorio remoto.
+```
+## Otra solucion
+
+```bash
+git reflog #Muestra el historial de movimientos de HEAD, incluso después de un reset --hard.
+git revert hard #para recuperar
+
+```
+## EXTRA:
+para ver que hicimos en algún archivo ponermos: 
+
+```bash
+git show identficadorCommit
+```
+
 ---
