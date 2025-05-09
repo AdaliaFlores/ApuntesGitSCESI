@@ -271,11 +271,11 @@ git branch -a                  # Ver ramas locales y remotas
 git remote prune origin        # Eliminar ramas remotas que ya no existen
 ```
 
-### 🔁 Git Push vs Git Pull
+### Git Push vs Git Pull
 - `git push`: Sube cambios del local al remoto
 - `git pull`: Trae cambios del remoto al local
 
-### 🛠️ Comandos Git Push
+### Comandos Git Push
 ```bash
 git fetch                          # Actualiza referencias
 git push -u origin <rama>
