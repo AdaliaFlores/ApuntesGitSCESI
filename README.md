@@ -227,4 +227,78 @@ Un conflicto ocurre cuando Git **no puede determinar automáticamente qué cambi
 
 El usuario debe elegir qué contenido conservar o combinar ambos.
 
+# GitHub, push, pull y pull-request 
+
 ---
+### ¿Git y GitHub son lo mismo?
+- **Git**: Control de versiones
+- **GitHub**: Plataforma para alojar código basado en Git
+
+### Alternativas a GitHub
+- BitBucket
+- GitLab
+
+### ¿ Qué son los repositorios Remotos?
+Son puntos de sincronización entre repositorios locales.
+
+#### Enlazar repositorio local con remoto:
+```bash
+git remote add origin urlRepositorio
+```
+
+### Generar clave SSH
+Sirve para autenticación segura.
+
+Se realiza mediante el siguiente comando:
+
+```bash
+git config list   # Ver configuración actual
+```
+
+### Clonar repositorio
+```bash
+git clone urlRepositorio
+```
+
+### Subir cambios
+```bash
+git push origin nombreRama     # Enviar ramas locales a un repositorio remoto
+git branch -a                  # Ver ramas locales y remotas
+```
+
+### Eliminar ramas
+```bash
+git remote prune origin        # Eliminar ramas remotas que ya no existen
+```
+
+### 🔁 Git Push vs Git Pull
+- `git push`: Sube cambios del local al remoto
+- `git pull`: Trae cambios del remoto al local
+
+### 🛠️ Comandos Git Push
+```bash
+git fetch                          # Actualiza referencias
+git push -u origin <rama>
+git push origin <rama1><rama2><rama3> # Muestra solo las ramas listadas
+git push -d origin <rama>          # Borra rama remota
+git push -f                        # Forzar subida
+```
+
+### 📥 Pull Request (PR)
+Petición para fusionar cambios del local al original.
+
+#### Hacer una PR
+1. Desde la rama en GitHub → botón para crear PR
+2. Desde pestaña Pull Request
+
+#### Buena PR
+- Código hace una sola cosa
+- Explicación clara
+- Usa imágenes si es necesario
+
+#### Revisar PR
+- Feedback claro y específico
+- Entender el contexto
+
+---
+
